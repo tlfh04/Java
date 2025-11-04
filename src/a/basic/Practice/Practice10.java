@@ -1,9 +1,9 @@
-package a.basic;
+package a.basic.Practice;
 
 public class Practice10 {
     public static void main(String[] args) {
         int price = 120000;
-        boolean isMember = true;
+        boolean isMember = false;
         double sale;
         int result;
 
