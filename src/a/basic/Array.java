@@ -1,4 +1,5 @@
 package a.basic;
+import java.util.Arrays;
 
 public class Array {
     public static void main(String[] args) {
@@ -55,5 +56,43 @@ public class Array {
             }
             System.out.println();
         }
+
+        // binarySearch()
+        int index = Arrays.binarySearch(numbers,5);
+        System.out.println(index);
+
+        // fill()
+        int[] filled = new int[5];
+        Arrays.fill(filled,10);
+        System.out.println(Arrays.toString(filled));
+
+        // copyOf()
+        int[] original = {1,2,3,4,5};
+        int[] copied = Arrays.copyOf(original,original.length);
+        System.out.println(Arrays.toString(copied));
+
+        int[] copied2 = original;
+        System.out.println(Arrays.toString(copied2));
+        original[0] = 100;
+
+        System.out.println(Arrays.toString(original));
+        System.out.println(Arrays.toString(copied));
+        System.out.println(Arrays.toString(copied2));
+
+        // copyOfRange()
+        int[] ranged = Arrays.copyOfRange(original,1,3);
+        System.out.println(Arrays.toString(ranged));
+
+        // equals()
+        int[] arr4 = {1, 2, 3};
+        int[] arr5 = {1, 2, 3};
+        System.out.println(arr4 == arr5);
+        System.out.println(Arrays.equals(arr4, arr5));
+
+        // deepToString()
+        int[][] matrix = {{1,2},{3,4}};
+        System.out.println(Arrays.deepToString(matrix));
+
+
     }
 }
